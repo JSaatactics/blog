@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="SCSS/all.css">
 
 <body>
-    <nav class="container-fluid bg-primary">
+    <!-- Navbar Start -->
+    <nav class="container-fluid bg-info">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light px-0 pr-lg-4">
-                <a class="navbar-brand logo" href="#">Monkhaus</a>
+                <a class="navbar-brand logo" href="#">JS's Performance</a>
                 <button class="navbar-toggler mr-5" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -23,36 +24,37 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex align-items-lg-center align-items-start ml-auto">
                         <li class="nav-item mr-lg-4">
-                            <a class="nav-link menu-font" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link menu-font" href="index.html">首頁 <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-font mr-lg-4" href="shop-page.html">Shop</a>
+                            <a class="nav-link menu-font mr-lg-4" href="shop-page.html">人臉辨識簡介</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-font mr-lg-4" href="#">Contact</a>
+                            <a class="nav-link menu-font mr-lg-4" href="#">人臉辨識-分析</a>
                         </li>
-                        <li class="nav-item my-lg-0 my-2">
+                        <li class="nav-item">
+                            <a class="nav-link menu-font mr-lg-4" href="#">人臉辨識-比對</a>
+                        </li>
+
+                        <!-- <li class="nav-item my-lg-0 my-2">
                             <div class="form-inline flex-nowrap">
                                 <input class="form-control border-dark bg-transparent d-lg-none mr-1 toggle"
                                     type="search" placeholder="Search" aria-label="Search" id="SearchBar">
                                 <a href="#" class="text-dark showSearchBar"><i class="nav-link fas fa-search"></i></a>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
         </div>
-        <div class="d-flex shopping-bag-container justify-content-end">
-            <a href="#" class="text-dark view-bag" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-shopping-bag"></i>
-                <!-- <span class="item-total">3</span> -->
-            </a>
-        </div>
     </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
     <header class="header">
         <div class="title-block-l">
             <h1 class="title">
-                Handmade Patisserie</br>& Artisan Coffee
+                Personal Display Space</br>& Growing Experience
             </h1>
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -64,19 +66,21 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="slider bg-cover"
-                        style="background-image: url(images/banner-1-min.jpg)"></div>
+                        style="background-image: url(images/backgrund4.jpg)"></div>
                 </div>
                 <div class="carousel-item">
                     <div class="slider bg-cover"
-                        style="background-image: url(images/banner-2-min.jpg)"></div>
+                        style="background-image: url(images/backgrund5.jpg)"></div>
                 </div>
                 <div class="carousel-item">
                     <div class="slider bg-cover"
-                        style="background-image: url(images/banner-3-min.jpeg)"></div>
+                        style="background-image: url(images/backgrund3.jpg)"></div>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Header End -->
+
     <section class="container mt-lg-7 mt-4">
         <div class="row justify-content-between">
             <div class="col-lg-6 d-lg-block d-none">
@@ -205,7 +209,169 @@
                 </a>    
             </div>
         </div>
+        <!-- Facilities Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        
+                        <div class="pl-4">
+                            <h4>題目發想</h4>
+                            <p class="m-0">一開始看到kaggle比賽中有依人臉照片分析血緣的比賽，依提供之數據集來分析照片血緣分析。覺得很好玩，繼續研究下去分析了一些參考文獻。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        
+                        <div class="pl-4">
+                            <h4>模型選用</h4>
+                            <p class="m-0">依參考文獻的研究，我最後選用 FaceNet、VGGFace模型來做後續的分析。並用MTCMM做多人偵測的模型。
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        
+                        <div class="pl-4">
+                            <h4>工具選用</h4>
+                            <p class="m-0">主要選用python語言，用numpy和pandas整理資料，人臉分析和偵測用了deepface和opencv。網頁呈現使用nodejs整合前端和py檔。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        
+                        <div class="pl-4">
+                            <h4>價值分析1</h4>
+                            <p class="m-0">分析人臉資訊部分可應用於分析表演或演講中分析台下有多少觀眾當下的的滿意比例，及分析受眾的大數年齡及性別。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        
+                        <div class="pl-4">
+                            <h4>價值分析2</h4>
+                            <p class="m-0">照片比對部分，檢測多張照片的人臉特徵距離(1對多)，快速確認是否為同一人，可用於打卡系統或註冊登入系統。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        
+                        <div class="pl-4">
+                            <h4>伺服器主機架設</h4>
+                            <p class="m-0">由於有分析需求，Amazon EC2需要計算的時間太長，目前的雲端server主機為Azurz虛擬主機，其配置vcpu 4 , RAM 16 GiB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities Start -->
+
+
+    <!-- Analyze Start -->
+    <div class="container-fluid py-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    
+                    <p class="section-title pr-5"><span class="pr-2">人臉分析</span></p>
+                    <h1 class="mb-4">分析人臉的資訊</h1>
+                    <p>用VGG-Face模型，將人臉圖轉成2622維度的向量後，分析出人臉的年齡、性別、人種和情緒。</p>
+                    <div class="row pt-2 pb-4">
+
+                        <div class="col-6 col-md-8">
+                            <ul class="list-inline m-0">
+                                <li class="py-2 border-top border-bottom"></i>年齡(皺紋、皮膚)</li>
+                                <li class="py-2 border-bottom"></i>性別(臉型)</li>
+                                <li class="py-2 border-bottom"></i>人種(膚色)</li>
+                                <li class="py-2 border-bottom"></i>情緒(嘴角、眼角)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="col-lg-8">
+                    
+                        <img class="img-fluid rounded mb-5 mb-lg-0" src="../css_js/img/analyze1.jpg" >
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Analyze End -->
+
+        <!-- Ver Start -->
+        <div class="container-fluid py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <img class="img-fluid rounded mb-5 mb-lg-0" src="../css_js/img/Verification1.jpg" >
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="section-title pr-5"><span class="pr-2">人臉比對</span></p>
+                        <h1 class="mb-4">比對2人臉是否為同一人</h1>
+                        <p>用VGG-Face模型，將人臉圖轉成2622維度的向量後，分析出人臉的embedding，兩張圖片的向量會有對應的cosine distance，以及對應的閥值，距離在閥值內代表2張照片的特徵夠接近，判定為同一人。</p>
+                        <div class="row pt-2 pb-4">
+    
+                            <div class="col-6 col-md-8">
+                                <ul class="list-inline m-0">
+                                    <li class="py-2 border-top border-bottom"></i>使用的模型(VGG-Face)</li>
+                                    <li class="py-2 border-bottom"></i>距離(cosine distance)</li>
+                                    <li class="py-2 border-bottom"></i>對應罰值(threshold)</li>
+                                    <li class="py-2 border-bottom"></i>判定是否為同一人(verified)</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ver End -->
+
+<!-- mtcnn Start -->
+<div class="container-fluid py-1">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <p class="section-title pr-5"><span class="pr-2">群眾分析</span></p>
+                <h1 class="mb-4">群眾分析人臉的資訊</h1>
+                <p>先使用MTCNN人臉偵測模型，將畫面中的人臉一個個偵測出來後，對每個人臉區塊拉出來，在對每個人臉分別作分析，最後統整起來。</p>
+                <div class="row pt-2 pb-4">
+
+                    <div class="col-6 col-md-8">
+                        <ul class="list-inline m-0">
+                            <li class="py-2 border-top border-bottom"></i>情緒統計</li>
+                            <li class="py-2 border-bottom"></i>年齡統計</li>
+                            <li class="py-2 border-bottom"></i>性別統計</li>
+                            <li class="py-2 border-bottom"></i>情緒統計的滿意度(共有多少百分比是開心的)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="col-lg-12">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="../css_js/img/mtcnn1.jpg" >
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mtcnn End -->
     </section>
+
+    <!-- Footer Start -->
     <footer class="container-fluid bg-primary mt-5">
         <div class="container py-3">
             <div class="row align-items-lg-end align-items-center">
@@ -238,7 +404,11 @@
                 </div>
             </div>
         </div>
+
+        
     </footer>
+    <!-- Footer End -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/603783971e.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
